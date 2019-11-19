@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <meta name="theme-color" content="#5c85e2">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/dashboard/">
+     <link rel="manifest" href="/manifest.json">
+    <title>svu</title>
+    <link href="dashboard.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><b style="font-size:30px">SVU</b></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="">Help</a></li>
+          </ul>
+<!--           <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form> -->
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+       <div id="mySidenav" class="sidenav">
+   <a onclick="closeNav()" class="clsbtn">X</a>
+  <a href="#">Home</a>
+  <a href="#">Departments</a>
+  <a href="/users/alumni">Alumni</a>
+  <a href="#">Contact</a>
+</div>
+
+
+<span onclick="openNav()"></span>
+
+
+<div id="main2">
+  
+
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+</div>
+        <div class="main">
+          <h3 style="font-family:monospace;">Departments</h3>
+
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-2 placeholder">
+            <a href="#" >
+             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEX///8FBwgAAACtra67vLx1dnZsbGyMjI2UlZXNzc1XWFjW1tampqaXl5fJycnCwsIvMDBLTEzd3d3z8/Pm5uZGR0d8fX1gYWFTU1MzNDSxsrITFRWHiIjg4OA8PT1vcHAlJibu7+8bHB2np6cnvpnaAAADXklEQVR4nO3c63aiMBSGYYmooKJWPFZH2un93+PQUItCPOGWBOZ9frW7Lla+RSEhhnQ6AAAAAAAAAAAAAAAAAAAAAAAAAAAANYnDkam8COem8jz8fG1z5PlKqV251fu0vC5/epmWxzW0SpJSnqf6xeoorXqqWyxHuryop2VCsiizYnmsy4NieajL03qaJoSE50joIhKea2LCuW7ztlju6nJQLGcJJ/U07VmTKEhFK93mv/qXXLTW5U2xvNXlRJfHbp9K31M/vG+q5K5yaUTgjuCnrc9RKrEd5BJfIp/O6OoYdSeWUMW2sxiFUgHTiO+2wxiNBROubIcxCgQTlp67nEDCViUs9+l3cT1h9NtCdXjvPu59kx/ArT4/HmnzVd7Aajf7vLtRw3l2UCf6Rd/wT1ZtZBka/s2/hFtbQWwYiz6fME9qfwbONJKRS+ipULi9jxu1PmFn9tLrUAm3top4tXzTZkosodptZ9ra/mV4IhJM6FZ/eBQYEs73g1v2v1faSUI3xzSmhOM7xmq/56uhCcu3x+Ldsnf8MAmtezrhtPUJfRLaZko4ICEJnUJCEpLQPtPTU9WEbj09TaLMUDDhsjvWnPhuv3dtFqNiwnwWw7DMr26LqzNRVRPmfzWu4azV9dnE5xPan2v70/pz2Om/9Do82Al1zs9mlIKN4L30EGQHdeBrixPt7Q+P2j+mISEJSWgfCUlIQvtISMJmJtw/8h1wIxOGSe+WxD9+2PmET6/FcPbpab8ZalvBhB/ZIYcDFxYnbsXWRJlmMT5kG1uF4Lo2R+faBNcmOprw88UJja/v1+vrpdfhXri1lXxOtLCX3wqrrfM+WU+zmUy1P8Jtfc5Jf7iZ+vcLj9au9/jtf9/iv3pnhoQNTRgJJnTz/cOpYEJHX+cWeZNbB3T0PeB0dCOVsLSvhCsSmbOohraDXDY+77wv9Om3ys6ewW+xv0/6/X6S7eWx+/75RHLQ5UOx/KHLQ13ufTVj168Le5tkW15d2NvE/pPgI0bXEl7Yn8aJFV53yxK+FcskbBASnmtuwmWxHJgTbhqYMDbvm6gH5+VZnGxXKadeF71Nj27Kffc6rZbObCf2XB/JmCxCYw8+Mm9rGoZuzaoBAAAAAAAAAAAAAAAAAAAAAAAAAIBW+we2MDTgEW40VAAAAABJRU5ErkJggg==" width="150" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+              <h4><b>ECE</b></h4>
+            </div>
+            <div class="col-xs-6 col-sm-2 placeholder">
+              <a href="#" >
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShW_OLJwKGuQ0zVY3ezMR5FSlFX9t3LIYAApYpqAYy2Ev2kOj-" width="150" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+              <h4><b>CSE</b></h4>
+            </div>
+            <div class="col-xs-6 col-sm-2 placeholder">
+              <a href="#" >
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRI8U01q4tPlFCA9gtvr5j4GAMjaUleUD-dP5wn_J_BPkcJ3nh1" width="150" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+              <h4><b>MECH</b></h4>
+            </div>
+            <div class="col-xs-6 col-sm-2 placeholder">
+              <a href="#" >
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ8MRI3iKCTl45gnMA0jgXxI20zRS6THqubMSs4hAfE7Jz21nK5" width="150" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+              <h4><b>CIVIL</b></h4>
+            </div>
+            <div class="col-xs-6 col-sm-2 placeholder">
+              <a href="#" >
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ42x7baT29dGbMjEsUqSf88TOtL42PLlrf7HHJjirBf3gdLg5e" width="150" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+              <h4><b>EEE</b></h4>
+            </div>
+            <div class="col-xs-6 col-sm-2 placeholder">
+              <a href="#" >
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQxl1flYGonMbe9lntDAk1tVJ82VslRMvQhlyrrbKvZ45A7z6D0" width="150" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+              <h4>CHEMICAL</h4>
+            </div>
+          </div>
+        <h1></h1>
+         <p>SVUCE, a constituent college of Sri Venkateswara University, Tirupati, was established in 1959 and started functioning from 10 August 1959.
+
+The foundation stone for the college Main Building was laid on 13 October 1959 by Pandit Jawaharlal Nehru, the first Prime Minister of India. It was declared open on 21 November 1968 by Sri. K Brahmananda Reddy, the then Chief Minister of Andhra Pradesh.
+
+From the year 1977-78, the names of BE and ME were changed as B.Tech and M.Tech. The institution achieved autonomous status in 2005.
+
+SVU Secured 63rd Rank out of 100 Ranks, out of about 850 Central, State, Deemed, Private Universities, Central Institutions in India. S.V.University stands 13th position in Research Component.
+
+S.V.University also stands 186th Rank in the BRICS World Ranking – 2016.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   
+    <script src="/js/bootstrap.min.js"></script>
+   
+  
+    <script src="serviceWorker.js"></script>
+  
+    
+    <script >
+      
+      function openNav() {
+  document.getElementById("mySidenav").style.width ="250px";
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0px";
+}
+
+//register a service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/serviceWorker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+    </script>
+  </body>
+</html>

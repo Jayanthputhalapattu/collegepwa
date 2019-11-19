@@ -1,0 +1,41 @@
+.height1{
+	height:100px;
+}
+.height2{
+	height: 400px;
+}
+.grey{
+	background-color: grey;
+}
+.yellow{
+	background-color: yellow;
+}
+.cement{
+	background-color: #e8d2d2;
+}
+.shape{
+	width: 100px;
+	height:100px;
+	margin-left: 0px;
+}
+.middle{
+	margin-top: 30px;
+	margin-bottom: 70px;
+	margin-left: 20px
+}
+.list{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: : 20px;
+}
+.pic{
+	width: 1px;
+	height: 1px;
+	margin-bottom: 1px;
+	margin-top: 1px;
+	margin-right: 1px;
+}
+.co{
+	margin-top: 30px;
+	font-size: 25px;
+}
